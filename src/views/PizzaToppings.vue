@@ -1,25 +1,19 @@
 <template>
-  <div class="pizza-toppings">
+  <v-container class="px-0" fluid>
     <h1>Pizza Toppings</h1>
-    <div>
-      <input type="radio" id="contactChoice1" name="contact" value="5" checked>
-      <label for="contactChoice1">Mushrooms</label>
-    </div>
-    <div>
-      <input type="radio" id="contactChoice2" name="contact" value="10">
-      <label for="contactChoice2">Olives</label>
-    </div>
-    <div>
-      <input type="radio" id="contactChoice3" name="contact" value="15">
-      <label for="contactChoice3">Tomato</label>
-    </div>
-    <div>
-      <input type="radio" id="contactChoice3" name="contact" value="20">
-      <label for="contactChoice3">Bacon</label>
-    </div>
-    <div>
-      <input type="radio" id="contactChoice3" name="contact" value="20">
-      <label for="contactChoice3">Mozarella</label>
-    </div>
-  </div>
+    <v-radio-group>
+      <v-radio value="1" label="Mushrooms"/>
+      <v-radio value="1" label="Olives"/>
+      <v-radio value="0" label="Free"/>
+      <v-radio value="3" label="Tona"/>
+      <v-radio value="3" label="Pineapple"/>
+      <v-radio value="5" label="Seafood"/>
+      <v-radio value="2" label="Pepperoni"/>
+      <v-radio value="1" label="Bacon"/>
+      <v-radio value="0" label="Onion"/>
+      <v-radio value="3" label="Mozarella"/>
+    </v-radio-group>
+    <v-btn elevation="2">Previous</v-btn>
+    <v-btn elevation="2">Next</v-btn>
+  </v-container>
 </template>
