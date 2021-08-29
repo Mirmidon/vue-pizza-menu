@@ -1,7 +1,7 @@
 <template>
   <v-container id="input-usage" fluid>
     <h1>Results page</h1>
-    <v-btn elevation="2" v-on:click="nextPage">Check out</v-btn>
+    <v-btn elevation="2" v-on:click="checkOut">Check out</v-btn>
   </v-container>
 </template>
 
@@ -14,7 +14,7 @@
         // TODO: add vuex dispatcher to store data
         // this.$router.push('/pizza-toppings');
       // },
-      nextPage() {
+      checkOut() {
         // TODO: add vuex dispatcher to store data
         // this.$router.push('/checkout-redirect');
       }

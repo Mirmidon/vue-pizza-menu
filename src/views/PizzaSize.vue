@@ -23,6 +23,7 @@
       nextPage() {
         // console.log('selected ', this.selected);
         // TODO: add vuex dispatcher to store data
+        this.$store.dispatch('setPizzaSize', this.selected);
         this.$router.push('/pizza-toppings');
       }
     }

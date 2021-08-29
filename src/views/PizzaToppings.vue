@@ -26,12 +26,11 @@
 
     methods: {
       prevPage() {
-        // TODO: add vuex dispatcher to store data
+        // TODO: get prev values
         this.$router.push('/pizza-size');
       },
       nextPage() {
-        console.log('selected ', this.selected);
-        // TODO: add vuex dispatcher to store data
+        this.$store.dispatch('setPizzaToppings', this.selected);
         this.$router.push('/customer-details');
       }
     }

@@ -22,10 +22,9 @@
 
 <script>
   export default {
-    name: 'PizzaToppings',
+    name: 'CustomerDetails',
 
     data: () => ({
-      // selected: []
       name: "",
       address: "",
       phone: "",
@@ -33,12 +32,17 @@
 
     methods: {
       prevPage() {
-        // TODO: add vuex dispatcher to store data
+        // TODO: get prev values
         this.$router.push('/pizza-toppings');
       },
       goToResults() {
-        // console.log('to results ', this.name, this.address, this.phone);
-        // TODO: add vuex dispatcher to store data
+        const payload = {
+          name: this.name,
+          address: this.address,
+          phone: this.phone,
+        }
+
+        this.$store.dispatch('setCustomerDetails', payload);
         this.$router.push('/results');
       }
     }
