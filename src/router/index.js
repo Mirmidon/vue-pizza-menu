@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import PizzaSize from '../views/PizzaSize.vue'
 import PizzaToppings from '../views/PizzaToppings.vue'
 import CustomerDetails from '../views/CustomerDetails.vue'
+import Results from '../views/Results.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,11 @@ const routes = [
     path: '/customer-details',
     name: 'CustomerDetails',
     component: CustomerDetails
+  },
+  {
+    path: '/results',
+    name: 'Results',
+    component: Results
   },
 ]
 

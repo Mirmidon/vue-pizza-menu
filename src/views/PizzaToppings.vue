@@ -1,19 +1,39 @@
 <template>
   <v-container class="px-0" fluid>
     <h1>Pizza Toppings</h1>
-    <v-radio-group>
-      <v-radio value="1" label="Mushrooms"/>
-      <v-radio value="1" label="Olives"/>
-      <v-radio value="0" label="Free"/>
-      <v-radio value="3" label="Tona"/>
-      <v-radio value="3" label="Pineapple"/>
-      <v-radio value="5" label="Seafood"/>
-      <v-radio value="2" label="Pepperoni"/>
-      <v-radio value="1" label="Bacon"/>
-      <v-radio value="0" label="Onion"/>
-      <v-radio value="3" label="Mozarella"/>
-    </v-radio-group>
-    <v-btn elevation="2">Previous</v-btn>
-    <v-btn elevation="2">Next</v-btn>
+    <v-checkbox value="Mushrooms" label="Mushrooms" v-model="selected"></v-checkbox>
+    <v-checkbox value="Olives" label="Olives" v-model="selected"></v-checkbox>
+    <v-checkbox value="Tomato" label="Tomato" v-model="selected"></v-checkbox>
+    <v-checkbox value="Tona" label="Tona" v-model="selected"></v-checkbox>
+    <v-checkbox value="Pineapple" label="Pineapple" v-model="selected"></v-checkbox>
+    <v-checkbox value="Seafood" label="Seafood" v-model="selected"></v-checkbox>
+    <v-checkbox value="Pepperoni" label="Pepperoni" v-model="selected"></v-checkbox>
+    <v-checkbox value="Bacon" label="Bacon" v-model="selected"></v-checkbox>
+    <v-checkbox value="Onion" label="Onion" v-model="selected"></v-checkbox>
+    <v-checkbox value="Mozarella" label="Mozarella" v-model="selected"></v-checkbox>
+    <v-btn elevation="2" v-on:click="prevPage">Previous</v-btn>
+    <v-btn elevation="2" v-on:click="nextPage">Next</v-btn>
   </v-container>
 </template>
+
+<script>
+  export default {
+    name: 'PizzaToppings',
+
+    data: () => ({
+      selected: []
+    }),
+
+    methods: {
+      prevPage() {
+        // TODO: add vuex dispatcher to store data
+        this.$router.push('/pizza-size');
+      },
+      nextPage() {
+        console.log('selected ', this.selected);
+        // TODO: add vuex dispatcher to store data
+        this.$router.push('/customer-details');
+      }
+    }
+  }
+</script>

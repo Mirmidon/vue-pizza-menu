@@ -5,6 +5,9 @@
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome
         </h1>
+        <h2>
+          <v-btn elevation="2" v-on:click="nextPage">Create Pizza</v-btn>
+        </h2>
       </v-col>
     </v-row>
   </v-container>
@@ -13,6 +16,12 @@
 <script>
   export default {
     name: 'HelloWorld',
+
+    methods: {
+      nextPage() {
+        this.$router.push('/pizza-size');
+      }
+    },
 
     data: () => ({
       ecosystem: [
