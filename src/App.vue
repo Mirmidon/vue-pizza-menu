@@ -1,34 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/pizza-size">Pizza Size</router-link>
-      <router-link to="/pizza-toppings">Pizza Toppings</router-link>
-      <router-link to="/customer-details">Customer Details</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <v-spacer></v-spacer>
+
+      <v-btn>
+        <router-link to="/">Home</router-link>
+      </v-btn>
+      <v-btn>
+        <router-link to="/pizza-size">Pizza Size</router-link>
+      </v-btn>
+      <v-btn>
+        <router-link to="/pizza-toppings">Pizza Toppings</router-link>
+      </v-btn>
+      <v-btn>
+        <router-link to="/customer-details">Customer Details</router-link>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
